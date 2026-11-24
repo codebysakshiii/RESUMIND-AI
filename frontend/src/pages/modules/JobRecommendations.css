@@ -1,0 +1,49 @@
+
+.job-recommendations-page {
+  min-height: 100vh;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(79, 70, 229, 0.13), transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(124, 58, 237, 0.10), transparent 30%),
+    #080d1b;
+}
+
+.job-recommendations-page input,
+.job-recommendations-page select {
+  color-scheme: dark;
+}
+
+.job-recommendations-page input::placeholder {
+  color: #64748b;
+}
+
+.job-recommendations-page select option {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.job-recommendations-page button {
+  cursor: pointer;
+}
+
+.job-recommendations-page a {
+  text-decoration: none;
+}
+
+.job-recommendations-page button,
+.job-recommendations-page a,
+.job-recommendations-page input,
+.job-recommendations-page select {
+  transition: all 0.2s ease;
+}
+
+.job-recommendations-page input:focus,
+.job-recommendations-page select:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+@media (max-width: 640px) {
+  .job-recommendations-page {
+    padding: 16px;
+  }
+}

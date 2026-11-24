@@ -1,0 +1,556 @@
+.job-matching-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #0b1020;
+  color: #e8edf7;
+}
+
+.jm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.jm-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #a78bfa;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.jm-header h1 {
+  margin: 10px 0 6px;
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}
+
+.jm-header p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.jm-header-badge {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #312e81, #6d28d9);
+  display: grid;
+  place-items: center;
+  color: #c4b5fd;
+  box-shadow: 0 10px 30px #6d28d933;
+}
+
+/* Layout */
+.jm-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+}
+
+.jm-form-card,
+.jm-info-card {
+  padding: 26px;
+  border: 1px solid #26324a;
+  border-radius: 20px;
+  background: #131b2e;
+  box-shadow: 0 15px 40px #0000001c;
+}
+
+.jm-card-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.jm-icon-pill,
+.jm-info-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #312e814d;
+  color: #c4b5fd;
+}
+
+.jm-card-title h2,
+.jm-info-card h2 {
+  margin: 0 0 4px;
+  font-size: 19px;
+  font-weight: 750;
+  color: #ffffff;
+}
+
+.jm-card-title p,
+.jm-info-card p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.jm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.jm-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.jm-hint,
+.jm-char-count {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.jm-field input,
+.jm-field textarea {
+  padding: 12px 16px;
+  border: 1px solid #29354a;
+  border-radius: 12px;
+  background: #0b1020;
+  color: #ffffff;
+  font-size: 13.5px;
+  outline: none;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.jm-field input:focus,
+.jm-field textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px #6366f120;
+}
+
+/* Sample JD Chips */
+.jm-sample-jds {
+  margin-bottom: 18px;
+  padding: 12px;
+  background: #0b1020;
+  border-radius: 12px;
+  border: 1px solid #1f2a3f;
+}
+
+.jm-sample-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #a78bfa;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.jm-sample-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jm-chip-btn {
+  padding: 6px 12px;
+  background: #17223b;
+  border: 1px solid #293853;
+  color: #cbd5e1;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.jm-chip-btn:hover {
+  background: #233152;
+  border-color: #6366f1;
+  color: #ffffff;
+}
+
+.jm-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #ef444415;
+  border: 1px solid #ef444440;
+  color: #f87171;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.jm-submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px #6366f135;
+  transition: all 0.2s;
+}
+
+.jm-submit-btn:hover:not(:disabled) {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.jm-spin {
+  animation: jm-spin 1s linear infinite;
+}
+
+@keyframes jm-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Info card features */
+.jm-metric-points {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.jm-point {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.jm-check {
+  color: #34d399;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.jm-point strong {
+  display: block;
+  font-size: 13.5px;
+  color: #f8fafc;
+}
+
+.jm-point span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ------------------- RESULTS SECTION ------------------- */
+.jm-results-wrapper {
+  margin-top: 40px;
+}
+
+.jm-score-banner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  border: 1px solid #26324a;
+  border-radius: 20px;
+  background: #131b2e;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.jm-circular-score {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.jm-circular-inner {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #0b1020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jm-big-num {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.jm-score-sub {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.jm-score-details {
+  flex: 1;
+  min-width: 280px;
+}
+
+.jm-match-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.jm-score-details h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.jm-score-details p {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.jm-stats-mini-row {
+  display: flex;
+  gap: 20px;
+}
+
+.jm-mini-stat strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: #f1f5f9;
+}
+
+.jm-mini-stat span {
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+/* Tabs */
+.jm-tabs-bar {
+  display: flex;
+  gap: 8px;
+  background: #131b2e;
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid #26324a;
+  margin-bottom: 22px;
+}
+
+.jm-tabs-bar button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.jm-tabs-bar button.active {
+  background: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 4px 14px #4f46e540;
+}
+
+/* Tab Contents */
+.jm-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.jm-skill-box,
+.jm-suggestions-card,
+.jm-keywords-card,
+.jm-cover-card {
+  padding: 24px;
+  border: 1px solid #26324a;
+  border-radius: 18px;
+  background: #131b2e;
+}
+
+.jm-box-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.jm-box-head h3 {
+  font-size: 16px;
+  font-weight: 750;
+  color: #ffffff;
+  margin: 0;
+}
+
+.jm-skill-box p,
+.jm-keywords-card p {
+  color: #94a3b8;
+  font-size: 12.5px;
+  margin: 0 0 16px;
+}
+
+.jm-green { color: #10b981; }
+.jm-red { color: #f87171; }
+.jm-purple { color: #a78bfa; }
+.jm-blue { color: #38bdf8; }
+
+.jm-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jm-tag {
+  padding: 6px 13px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.jm-tag-green {
+  background: #10b98118;
+  border: 1px solid #10b98140;
+  color: #34d399;
+}
+
+.jm-tag-red {
+  background: #ef444418;
+  border: 1px solid #ef444440;
+  color: #f87171;
+}
+
+.jm-tag-blue {
+  background: #0284c718;
+  border: 1px solid #0284c740;
+  color: #38bdf8;
+}
+
+.jm-empty-msg {
+  color: #64748b;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.jm-suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jm-suggestions-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #cbd5e1;
+  background: #0b1020;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #202b40;
+}
+
+.jm-arrow {
+  color: #a78bfa;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Cover Letter Card */
+.jm-cover-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.jm-cover-head h3 {
+  font-size: 17px;
+  font-weight: 750;
+  color: #ffffff;
+  margin: 0 0 3px;
+}
+
+.jm-cover-head p {
+  color: #94a3b8;
+  font-size: 12.5px;
+  margin: 0;
+}
+
+.jm-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.jm-copy-btn:hover {
+  background: #4338ca;
+}
+
+.jm-cover-body pre {
+  background: #0b1020;
+  border: 1px solid #26324a;
+  border-radius: 12px;
+  padding: 20px;
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .jm-layout,
+  .jm-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

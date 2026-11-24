@@ -1,0 +1,219 @@
+
+/* =========================================
+   SKILL GAP — PREMIUM LAVENDER WHITE THEME
+========================================= */
+
+.skill-gap-page {
+  min-height: 100vh;
+  color: #292442;
+  background: linear-gradient(
+    135deg,
+    #fbfaff 0%,
+    #f5f1ff 48%,
+    #ffffff 100%
+  );
+  font-family: inherit;
+}
+
+.skill-gap-page > .mx-auto {
+  max-width: 1120px;
+}
+
+/* Header */
+
+.skill-gap-page h1 {
+  color: #292442;
+  letter-spacing: -0.8px;
+  font-weight: 800;
+}
+
+.skill-gap-page h2,
+.skill-gap-page h3 {
+  color: #30294a;
+  letter-spacing: -0.3px;
+}
+
+.skill-gap-page p {
+  line-height: 1.65;
+}
+
+/* Main form card */
+
+.skill-gap-page form.mb-8 {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #e9e2fa;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(91, 64, 145, 0.07);
+  transition: box-shadow 0.25s ease;
+}
+
+.skill-gap-page form.mb-8:hover {
+  box-shadow: 0 12px 36px rgba(91, 64, 145, 0.11);
+}
+
+/* Inputs and textareas */
+
+.skill-gap-page input,
+.skill-gap-page textarea,
+.skill-gap-page select {
+  border: 1px solid #e4ddf3;
+  border-radius: 11px;
+  background: #fdfcff;
+  color: #30294a;
+  transition: all 0.2s ease;
+}
+
+.skill-gap-page input:focus,
+.skill-gap-page textarea:focus,
+.skill-gap-page select:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+/* Buttons */
+
+.skill-gap-page button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.skill-gap-page button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.skill-gap-page button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Result cards and sections */
+
+.skill-gap-page .rounded-2xl.border.bg-white,
+.skill-gap-page .rounded-3xl.border.bg-white {
+  border-color: #e9e2f6;
+  box-shadow: 0 6px 24px rgba(91, 64, 145, 0.055);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.skill-gap-page .rounded-2xl.border.bg-white:hover {
+  box-shadow: 0 10px 28px rgba(91, 64, 145, 0.10);
+}
+
+/* Progress bar */
+
+.skill-gap-page .flex.h-5.overflow-hidden.rounded-full {
+  height: 11px;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #eee9f8;
+  box-shadow: inset 0 1px 2px rgba(48, 41, 74, 0.06);
+}
+
+.skill-gap-page .flex.h-5.overflow-hidden.rounded-full > div {
+  border-radius: 30px;
+  transition: width 0.6s ease;
+}
+
+/* Progress indicators */
+
+.skill-gap-page .h-2,
+.skill-gap-page .h-2\.5 {
+  border-radius: 20px;
+}
+
+.skill-gap-page .rounded-full {
+  transition: background 0.2s ease;
+}
+
+/* Skill badges */
+
+.skill-gap-page .rounded-full.border {
+  border-color: #e4daf9;
+}
+
+/* Skill and roadmap cards */
+
+.skill-gap-page .relative.rounded-2xl.border {
+  border-color: #e9e2f6;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(91, 64, 145, 0.05);
+}
+
+.skill-gap-page .relative.rounded-2xl.border:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 9px 25px rgba(124, 58, 237, 0.09);
+}
+
+/* Purple theme refinements */
+
+.skill-gap-page .text-purple-600,
+.skill-gap-page .text-purple-700 {
+  color: #7953c8;
+}
+
+.skill-gap-page .bg-purple-50 {
+  background-color: #f5f0ff;
+}
+
+.skill-gap-page .border-purple-200 {
+  border-color: #e2d6fa;
+}
+
+/* Loading and empty states */
+
+.skill-gap-page .text-center {
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+
+.skill-gap-page ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.skill-gap-page ::-webkit-scrollbar-thumb {
+  background: #d5c7f0;
+  border-radius: 20px;
+}
+
+.skill-gap-page ::-webkit-scrollbar-track {
+  background: #f8f5ff;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .skill-gap-page {
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
+
+  .skill-gap-page form.mb-8 {
+    border-radius: 17px;
+    padding: 20px;
+  }
+
+  .skill-gap-page h1 {
+    font-size: 27px;
+  }
+
+  .skill-gap-page .rounded-2xl.border.bg-white {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-gap-page h1 {
+    font-size: 23px;
+  }
+
+  .skill-gap-page form.mb-8 {
+    padding: 16px;
+  }
+}

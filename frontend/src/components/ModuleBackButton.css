@@ -1,0 +1,79 @@
+
+.module-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 11px 18px;
+  margin-bottom: 26px;
+
+  color: #6d4acb;
+  background: linear-gradient(
+    135deg,
+    #f3edff,
+    #eee9ff
+  );
+
+  border: 1px solid #d9c9fa;
+  border-radius: 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+
+  box-shadow: 0 3px 12px rgba(109, 74, 203, 0.10);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.module-back-button:hover {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #6366f1
+  );
+
+  border-color: #8b5cf6;
+
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.28);
+
+  transform: translateY(-2px);
+}
+
+.module-back-button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.module-back-button:focus-visible {
+  outline: 3px solid rgba(167, 139, 250, 0.45);
+  outline-offset: 3px;
+}
+
+.module-back-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.module-back-button:hover svg {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 600px) {
+  .module-back-button {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+}

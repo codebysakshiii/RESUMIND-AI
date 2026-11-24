@@ -1,0 +1,102 @@
+
+.mock-interview-page {
+  min-height: 100vh;
+  padding: 32px;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.16), transparent 35%),
+    #080b16;
+}
+
+.mock-interview-page .interview-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.mock-interview-page .interview-card {
+  padding: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.88);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.mock-interview-page input,
+.mock-interview-page select,
+.mock-interview-page textarea {
+  width: 100%;
+  padding: 13px 15px;
+  color: #f8fafc;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  outline: none;
+}
+
+.mock-interview-page input:focus,
+.mock-interview-page select:focus,
+.mock-interview-page textarea:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.12);
+}
+
+.mock-interview-page button {
+  transition: 0.2s ease;
+}
+
+.mock-interview-page button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.mock-interview-page button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.mock-interview-page .interview-primary-btn {
+  padding: 13px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+}
+
+.mock-interview-page .interview-secondary-btn {
+  padding: 12px 18px;
+  color: #c4b5fd;
+  border: 1px solid #6d28d9;
+  border-radius: 10px;
+  background: rgba(109, 40, 217, 0.12);
+}
+
+.mock-interview-page .interview-progress {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #1e293b;
+}
+
+.mock-interview-page .interview-progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  transition: width 0.3s ease;
+}
+
+.mock-interview-page .interview-feedback {
+  padding: 18px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.07);
+}
+
+@media (max-width: 640px) {
+  .mock-interview-page {
+    padding: 18px 12px;
+  }
+
+  .mock-interview-page .interview-card {
+    padding: 18px;
+  }
+}

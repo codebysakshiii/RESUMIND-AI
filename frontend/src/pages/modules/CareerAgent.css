@@ -1,0 +1,86 @@
+
+/* Career Agent Page */
+
+.mock-career-agent {
+  color: #f8fafc;
+}
+
+.career-agent-card {
+  background: linear-gradient(145deg, #111827, #0f172a);
+  border: 1px solid #293449;
+  border-radius: 18px;
+  transition: all 0.25s ease;
+}
+
+.career-agent-card:hover {
+  border-color: #8b5cf6;
+  transform: translateY(-2px);
+}
+
+.career-agent-input {
+  width: 100%;
+  background: #020617;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 12px 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.career-agent-input:focus {
+  border-color: #8b5cf6;
+}
+
+.career-agent-input::placeholder {
+  color: #64748b;
+}
+
+.career-agent-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #7c3aed, #6366f1);
+  color: white;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.career-agent-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px #7c3aed35;
+}
+
+.career-agent-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.career-agent-skill {
+  padding: 8px 13px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.career-agent-week {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 18px;
+  transition: border-color 0.2s ease;
+}
+
+.career-agent-week:hover {
+  border-color: #8b5cf6;
+}
+
+@media (max-width: 640px) {
+  .career-agent-card {
+    border-radius: 14px;
+  }
+
+  .career-agent-week {
+    padding: 14px;
+  }
+}
